@@ -88,21 +88,6 @@ export const HealthScreen = () => {
         </View>
       </View>
 
-      <View style={styles.quickCheckCard}>
-        <View style={styles.quickCheckContent}>
-          <Text style={styles.quickCheckText}>
-            Quick check your health status
-          </Text>
-          <View style={styles.timerCircle}>
-            <Icon
-              name="clock-outline"
-              size={24}
-              color={colors.secondary.main}
-            />
-          </View>
-        </View>
-      </View>
-
       <View style={styles.healthTipsContainer}>
         <Text style={styles.sectionTitle}>Daily Health Tips</Text>
         <View style={styles.tipCard}>
@@ -278,30 +263,8 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: colors.text.secondary,
   },
-  quickCheckCard: {
-    backgroundColor: "#FFF1EC",
-    borderRadius: 22,
-    padding: spacing.md,
+  healthTipsContainer: {
     marginBottom: spacing.lg,
-  },
-  quickCheckContent: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  quickCheckText: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: colors.text.primary,
-    flex: 1,
-  },
-  timerCircle: {
-    width: 42,
-    height: 42,
-    borderRadius: 21,
-    backgroundColor: "#FFFFFF",
-    alignItems: "center",
-    justifyContent: "center",
   },
   sectionTitle: {
     fontSize: 18,
@@ -388,9 +351,6 @@ const styles = StyleSheet.create({
   lineChart: {
     marginLeft: -16,
     borderRadius: 16,
-  },
-  healthTipsContainer: {
-    marginBottom: spacing.lg,
   },
   tipCard: {
     backgroundColor: "#FFFFFF",

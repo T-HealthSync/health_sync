@@ -1,11 +1,18 @@
-import React from 'react';
-import { StyleSheet, ScrollView, View, TouchableOpacity } from 'react-native';
-import { Text, useTheme, Avatar, List, Switch, Button as PaperButton } from 'react-native-paper';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { useNavigation } from '@react-navigation/native';
+import React from "react";
+import { StyleSheet, ScrollView, View, TouchableOpacity } from "react-native";
+import {
+  Text,
+  useTheme,
+  Avatar,
+  List,
+  Switch,
+  Button as PaperButton,
+} from "react-native-paper";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { useNavigation } from "@react-navigation/native";
 
-import { Card } from '../components/Card';
-import { colors, spacing } from '../theme/theme';
+import { Card } from "../components/Card";
+import { colors, spacing } from "../theme/theme";
 
 export const ProfileScreen = () => {
   const theme = useTheme();
@@ -20,7 +27,7 @@ export const ProfileScreen = () => {
       padding: spacing.md,
     },
     header: {
-      alignItems: 'center',
+      alignItems: "center",
       marginBottom: spacing.xl,
     },
     avatar: {
@@ -28,7 +35,7 @@ export const ProfileScreen = () => {
     },
     name: {
       fontSize: 24,
-      fontWeight: '600',
+      fontWeight: "600",
       color: colors.text.primary,
       marginBottom: spacing.xs,
     },
@@ -41,7 +48,7 @@ export const ProfileScreen = () => {
     },
     sectionTitle: {
       fontSize: 18,
-      fontWeight: '600',
+      fontWeight: "600",
       color: colors.text.primary,
       marginBottom: spacing.md,
     },
@@ -50,8 +57,8 @@ export const ProfileScreen = () => {
       marginBottom: spacing.xs,
     },
     listItemContent: {
-      flexDirection: 'row',
-      alignItems: 'center',
+      flexDirection: "row",
+      alignItems: "center",
     },
     listItemIcon: {
       marginRight: spacing.sm,
@@ -74,65 +81,59 @@ export const ProfileScreen = () => {
 
   const profileSections = [
     {
-      title: 'Personal Information',
+      title: "Personal Information",
       items: [
         {
-          icon: 'account',
-          title: 'Edit Profile',
-          description: 'Update your personal information',
+          icon: "account",
+          title: "Edit Profile",
+          description: "Update your personal information",
           onPress: () => {},
         },
         {
-          icon: 'shield-account',
-          title: 'Privacy Settings',
-          description: 'Manage your privacy preferences',
+          icon: "shield-account",
+          title: "Privacy Settings",
+          description: "Manage your privacy preferences",
           onPress: () => {},
         },
       ],
     },
     {
-      title: 'Health Information',
+      title: "Health Information",
       items: [
         {
-          icon: 'medical-bag',
-          title: 'Medical History',
-          description: 'View and update your medical records',
+          icon: "medical-bag",
+          title: "Medical History",
+          description: "View and update your medical records",
           onPress: () => {},
         },
         {
-          icon: 'pill',
-          title: 'Medications',
-          description: 'Manage your medications',
+          icon: "pill",
+          title: "Medications",
+          description: "Manage your medications",
           onPress: () => {},
         },
         {
-          icon: 'file-document',
-          title: 'Insurance Information',
-          description: 'Update your insurance details',
+          icon: "file-document",
+          title: "Insurance Information",
+          description: "Update your insurance details",
           onPress: () => {},
         },
       ],
     },
     {
-      title: 'App Settings',
+      title: "App Settings",
       items: [
         {
-          icon: 'bell',
-          title: 'Notifications',
-          description: 'Manage notification preferences',
-          onPress: () => navigation.navigate('Notifications'),
+          icon: "bell",
+          title: "Notifications",
+          description: "Manage notification preferences",
+          onPress: () => navigation.navigate("Notifications"),
         },
         {
-          icon: 'phone',
-          title: 'USSD Support',
-          description: 'Access basic features via USSD',
-          onPress: () => navigation.navigate('USSDSupport'),
-        },
-        {
-          icon: 'theme-light-dark',
-          title: 'Dark Mode',
-          description: 'Toggle dark mode',
-          right: () => <Switch value={false} onValueChange={() => {}} />,
+          icon: "phone",
+          title: "USSD Support",
+          description: "Access basic features via USSD",
+          onPress: () => navigation.navigate("USSDSupport"),
         },
       ],
     },
@@ -144,7 +145,7 @@ export const ProfileScreen = () => {
         <View style={styles.header}>
           <Avatar.Image
             size={100}
-            source={{ uri: 'https://via.placeholder.com/100' }}
+            source={{ uri: "https://via.placeholder.com/100" }}
             style={styles.avatar}
           />
           <Text style={styles.name}>John Doe</Text>
@@ -187,4 +188,4 @@ export const ProfileScreen = () => {
       </View>
     </ScrollView>
   );
-}; 
+};
